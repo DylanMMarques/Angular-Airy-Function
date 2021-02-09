@@ -28,20 +28,11 @@ field = FieldAngularSpectrum_gaussian(sx,sy,10E-6,λ,1,1,ReferenceFrame(0,0,0.))
 
 # Data shown in fig. 3b
 # The first dimension is only valid for vectorial simulations in Jolab
-
 # Absolute value of the incident, reflected and transmitted plane waves components.
 idata = abs.(field.e_SXY[1,:,:])
 tdata = abs.(fieldt.e_SXY[1,:,:]) ./ maximum(idata)
 rdata = abs.(fieldr.e_SXY[1,:,:]) ./ maximum(idata)
 idata = idata ./ maximum(idata)
-
-# iimg = getimgdata(idata, :deep, (0.,1. + .1))
-# rimg = getimgdata(rdata, :deep, (0.,1. +1E-9))
-# timg = getimgdata(tdata, :deep, (0.,1. +1E-9))
-
-# save("/home/dylan/Documents/iimg.png", iimg)
-# save("/home/dylan/Documents/rimg.png", rimg)
-# save("/home/dylan/Documents/timg.png", timg)
 
 ## Creating data for fig. 3a
 
@@ -86,3 +77,5 @@ field = FieldAngularSpectrum_gaussian(sx,[0.],10E-6,λ[i],1,1,ReferenceFrame(0,0
 
 # Plotting the angular spectrum of fig 3.a
 plot(field.nsx, abs.(field.e_SXY[1,:,1]))
+
+# To create the data from fig.4, these script only needs to be edited to change the mirror reflectivity
