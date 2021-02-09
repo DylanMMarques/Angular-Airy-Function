@@ -76,6 +76,6 @@ field = FieldAngularSpectrum_gaussian(sx,[0.],10E-6,λ[i],1,1,ReferenceFrame(0,0
 (fieldr, fieldt) = lightinteraction(fp, field)
 
 # Plotting the angular spectrum of fig 3.a
-plot(field.nsx, abs.(field.e_SXY[1,:,1]))
+plot(field.nsx_X, abs.(field.e_SXY[1,:,1]))
 
 # To create the data from fig.4, these script only needs to be edited to change the mirror reflectivity
