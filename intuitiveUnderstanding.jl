@@ -1,6 +1,4 @@
-using Jolab, Plots, FileIO
-plotly()
-include("/home/dylan/Documents/julia/Savefig.jl")
+using Jolab, Plots
 
 # Initialization of both mirrors that form the FP cavity
 mirror1 = Mirror(.97,1,1,ReferenceFrame(0,0,0.))
