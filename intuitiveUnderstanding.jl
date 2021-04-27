@@ -61,7 +61,6 @@ end
 # Plotting the ITF of the inset of fig.3a
 plot!(λ, itf)
 cosθ = λ .* (13 .- 1/2) ./ 2 ./ 1 ./ 10E-6
-stop
 
 # Increase the sampling for better plots sampling
 sx = range(-.3, .3, length = 512)
@@ -70,7 +69,7 @@ sx = range(-.3, .3, length = 512)
 i = 321
 
 # Initialization of the initial field
-field = FieldAngularSpectrum_gaussian(sx,[0.],10E-6,λ[i],1,1,ReferenceFrame(0,0,0.))
+field = FieldAngularSpectrumScalar_gaussian(sx,[0.],10E-6,λ[i],1,1,ReferenceFrame(0,0,0.))
 
 # Calculation of the transmitted and reflected field
 (fieldr, fieldt) = lightinteraction(fp, field)
