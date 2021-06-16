@@ -12,4 +12,4 @@ The 4 scripts available do:
 * intuitiveUnderstanding.jl - compute the data shown in fig. 3;
 * modelCompairison.jl - show that the angular Airy function matches a multilayer model (data not shown in the paper);
 
-To compute the results, we use [Jolab.jl](https://github.com/DylanMMarques/Jolab.jl) which (indirectly) implements the angular Airy function. The same results can be computed based on the scripts available in angularAiryFunction.jl
+To compute the results, we used the version 0.1.4 of [Jolab.jl](https://github.com/DylanMMarques/Jolab.jl) which (indirectly) implements the angular Airy function. The same results can be computed based on the scripts available in angularAiryFunction.jl
