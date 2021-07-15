@@ -50,15 +50,15 @@ function data(λ, mfd, f_col, f_obj, R1, R2)
 	Threads.@threads for i in eachindex(λ)
 		## Propagation of the fields by the optical system in Jolab
 		field = Jolab.FieldAngularSpectrumScalar_fromfibre(fibre, nsx, nsy, λ[i])
-    	(~, field) = lightinteraction(collimator, field)
-    	(~, field) = lightinteraction(objective, field)
+    		(~, field) = lightinteraction(collimator, field)
+    		(~, field) = lightinteraction(objective, field)
 
-    	(rfield, tfield) = lightinteraction(fp_airy, field)
-    	itf_t_airy[i] = intensity(tfield)
+    		(rfield, tfield) = lightinteraction(fp_airy, field)
+    		itf_t_airy[i] = intensity(tfield)
 
-    	(rfield, ~) = lightinteraction(objective, rfield)
-    	(rfield, ~) = lightinteraction(collimator, rfield)
-    	itf_r_airy[i] = signal(fibre, rfield)
+    		(rfield, ~) = lightinteraction(objective, rfield)
+    		(rfield, ~) = lightinteraction(collimator, rfield)
+    		itf_r_airy[i] = signal(fibre, rfield)
 	end
 
 	return (itf_r_airy, itf_t_airy)
@@ -120,6 +120,6 @@ R2_val = 0.9856
 plot(λ[4,:], itf_r_airy[4,:])
 plot!(λ[4,:], itf_t_airy[4,:])
 
-# [1] - Marques, Dylan M., et al. "Angular Airy function"
+# [1] - Marques, Dylan M., et al. "Angular Airy function: a model of Fabry-Perot etalons illuminated by arbitrary beams"
 # [2] - Marques, Dylan M., et al. "Modelling fabry-pérot etalons illuminated by focussed beams."
 # Optics express 28.5 (2020): 7691-7706. https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-28-5-7691&id=427957
