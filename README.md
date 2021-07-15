@@ -1,6 +1,7 @@
 # Angular Airy function
 
 The scripts presented in this paper were used to compute the results from the paper:
+
 [Dylan M. Marques, James A. Guggenheim, and Peter R. T. Munro, "Angular Airy function: a model of Fabry-Perot etalons illuminated by arbitrary beams," Opt. Express 29, 24144-24150 (2021)](https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-29-15-24144&id=453309###)
 
 If you publish scientific results based on this scripts, please consider citing the paper.
