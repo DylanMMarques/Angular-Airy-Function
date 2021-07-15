@@ -73,12 +73,12 @@ function data(λ, ω)
 	Threads.@threads for i in eachindex(λ)
 		## Propagation of the fields by the optical system in Jolab
 		field = FieldAngularSpectrumScalar_gaussian(nsx, nsy, ω, λ[i], n_air(λ[i]), dir, ref_1)
-    	(rfield, tfield) = lightinteraction(fp_mls, field)
-    	itf_t_mls[i] = intensity(tfield)
-    	itf_r_mls[i] = intensity(rfield)
+    		(rfield, tfield) = lightinteraction(fp_mls, field)
+    		itf_t_mls[i] = intensity(tfield)
+    		itf_r_mls[i] = intensity(rfield)
 
-    	(rfield, tfield) = lightinteraction(fp_airy, field)
-    	itf_r_airy[i] = intensity(rfield)
+    		(rfield, tfield) = lightinteraction(fp_airy, field)
+    		itf_r_airy[i] = intensity(rfield)
 		itf_t_airy[i] = intensity(tfield)
 	end
 	return (itf_r_airy, itf_t_airy, itf_r_mls, itf_t_mls)
