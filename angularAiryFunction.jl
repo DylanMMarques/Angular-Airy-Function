@@ -80,3 +80,5 @@ plot(λ_airy, i_t ./ maximum(i_r))
 plot!(λ_airy, i_r ./ maximum(i_r))
 plot!(λ_airy, jolab_r)
 plot!(λ_airy, jolab_t)
+
+# [1] Dylan M. Marques, James A. Guggenheim, and Peter R. T. Munro, "Angular Airy function: a model of Fabry-Perot etalons illuminated by arbitrary beams," Opt. Express 29, 24144-24150 (2021)
